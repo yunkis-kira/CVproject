@@ -23,11 +23,11 @@ for num in range(page_num):
     driver.get(the_url)
 
     sleep_time = 0.5
-    delay = 5
+    delay = 6
     try:
-        WebDriverWait(driver, delay)
+        WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.CLASS_NAME, "shopee__kZMc3xKQ4ab")))
         driver.set_window_size(1500, 768)
-        time.sleep(3)
+        #time.sleep(3)
         print('Page is loaded!')
         #'''
         driver.execute_script("window.scrollTo(0, 250)")
@@ -91,7 +91,7 @@ for num in range(page_num):
             img_name = img_name.replace('<','')
             img_name = img_name.replace('>','')
             img_name = img_name.replace('|','')
-            img_name = "img_data{}.jpg".format(img_name)
+            img_name = "shopee_scraper/img_data/{}.jpg".format(img_name)
             
             
             with open(img_name, 'wb') as handler:
