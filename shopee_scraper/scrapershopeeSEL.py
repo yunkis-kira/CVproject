@@ -75,7 +75,7 @@ for num in range(page_num):
             print('item price:',item_price,'₫')
             item_sold = item.find('div', class_ = 'go5yPW').text.replace('Đã bán ','')
             item_sold = item_sold.replace(',','.')
-            print('item sold:', item_sold)
+            print('items sold:', item_sold)
             item_location = item.find('div', class_ = '_2CWevj').text
             print('item location:', item_location)
             item_img_url = item.find('img', class_ = 'mxM4vG _2GchKS').get('src')
