@@ -23,7 +23,7 @@ for num in range(page_num):
     driver.get(the_url)
 
     sleep_time = 0.5
-    delay = 6
+    delay = 4.5
     try:
         WebDriverWait(driver, delay).until(EC.presence_of_element_located((By.CLASS_NAME, "shopee__kZMc3xKQ4ab")))
         driver.set_window_size(1500, 768)
